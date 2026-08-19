@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: MS-Welcome_api-01
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:9090/
+server:
+  port: 1111
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
+      

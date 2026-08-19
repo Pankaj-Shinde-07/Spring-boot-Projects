@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;in.pankaj.entity.ImageEntitiy&apos; to &apos;ImageEntity&apos;&#x0D;&#x0A;- Original project: &apos;data_jpa_appl_Ass-04&apos;&#x0D;&#x0A;- Original element: &apos;in.pankaj.entity.ImageEntitiy&apos;&#x0D;&#x0A;- Renamed element: &apos;in.pankaj.entity.ImageEntity&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ImageEntitiy&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.pankaj.entity{ImageEntitiy.java[ImageEntitiy" matchStrategy="1" name="ImageEntity" qualified="false" references="true" similarDeclarations="false" stamp="1782393859985" textual="false" version="1.0"/>
+</session>

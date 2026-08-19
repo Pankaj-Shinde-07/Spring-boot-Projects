@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book Management</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light">
+
+	<div class="container mt-5">
+
+		<div class="row justify-content-center">
+
+			<div class="col-md-6">
+
+				<div class="card shadow-lg">
+
+					<div class="card-header bg-primary text-white text-center">
+						<h3>Update Book</h3>
+					</div>
+
+					<div class="card-body">
+
+						<!-- Success Message -->
+						<div class="alert alert-success" th:if="${updateMsgSucc}" th:text="${updateMsgSucc}">
+						</div>
+
+						<!-- Error Message -->
+						<div class="alert alert-danger" th:if="${updateMsgErr}" th:text="${updateMsgErr}">
+						</div>
+
+						<form th:action="@{/update}" th:object="${book}" method="post">
+
+							<div class="form-group">
+								<label><strong>Book Name</strong></label>
+								<input type="text" class="form-control" th:field="*{bookName}"
+									placeholder="Enter Book Name" required>
+							</div>
+
+							<div class="form-group">
+								<label><strong>Book Price</strong></label>
+								<input type="number" class="form-control" th:field="*{bookPrice}"
+									placeholder="Enter Book Price" required>
+							</div>
+
+							<button type="submit" class="btn btn-success btn-block">
+								Update Book
+							</button>
+							
+							<input type="hidden" th:field="*{bookId}">
+
+						</form>
+
+						<hr>
+
+						<a th:href="@{/showBooks}" class="btn btn-primary btn-block">
+							View All Books
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>

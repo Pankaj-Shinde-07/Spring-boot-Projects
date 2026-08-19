@@ -1,0 +1,47 @@
+<form method="post" th:action="@{/register}" th:object="${user}">
+
+    Enter Name :
+    <input type="text" th:field="*{name}">
+    <br><br>
+
+    Enter Email :
+    <input type="text" th:field="*{email}">
+    <br><br>
+
+    Gender :
+
+    <input type="radio" th:field="*{gender}" value="Male"> Male
+
+    <input type="radio" th:field="*{gender}" value="Female"> Female
+
+    <br><br>
+
+    Course :
+
+    <select th:field="*{course}">
+        <option value="">--Select Course--</option>
+		<option th:each="course : ${courses}"
+		        th:value="${course.courseName}"
+		        th:text="${course.courseName}">
+		</option>
+    </select>
+
+    <br><br>
+
+	Timings:
+
+	<div th:each="time : ${timings}">
+
+	    <input type="checkbox"
+	           th:field="*{timing}"
+	           th:value="${time.timing}">
+
+	    <span th:text="${time.timing}"></span>
+
+	</div>
+
+    <br><br>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+
+</form>

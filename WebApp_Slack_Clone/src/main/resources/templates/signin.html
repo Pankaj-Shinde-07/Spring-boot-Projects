@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in | Slack Clone</title>
+  <link rel="icon" type="image/png" href="https://a.slack-edge.com/80588/marketing/img/meta/favicon-32.png">
+  <link rel="stylesheet" href="./src/styles.css">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body class="bg-white text-[#1d1c1d] font-sans selection:bg-[#4a154b] selection:text-white min-h-screen flex flex-col">
+  <header class="py-8 flex justify-center border-b border-gray-100">
+    <a href="./index.html" class="flex items-center gap-2 group">
+      <div class="grid grid-cols-2 gap-0.5 w-7 h-7 group-hover:scale-105 transition-transform">
+        <div class="bg-[#36C5F0] rounded-sm"></div>
+        <div class="bg-[#2EB67D] rounded-sm"></div>
+        <div class="bg-[#E01E5A] rounded-sm"></div>
+        <div class="bg-[#ECB22E] rounded-sm"></div>
+      </div>
+      <span class="font-black text-2xl tracking-tighter">slack</span>
+    </a>
+  </header>
+
+  <main class="flex-1 flex flex-col items-center justify-center px-4 py-12">
+    <h1 class="text-4xl md:text-[48px] font-black tracking-tight mb-4 text-center">Sign in to Slack</h1>
+    <p class="text-gray-600 mb-8 text-center font-medium">We suggest using the email address you use at work.</p>
+
+    <form id="signin-form" class="w-full max-w-sm flex flex-col gap-4">
+      <div>
+        <input type="email" id="email" required placeholder="name@work-email.com"
+          class="w-full border border-gray-300 rounded px-4 py-3 text-lg focus:outline-none focus:border-[#4a154b] focus:ring-1 focus:ring-[#4a154b] transition-shadow">
+      </div>
+      <div>
+        <input type="password" id="password" required placeholder="Password"
+          class="w-full border border-gray-300 rounded px-4 py-3 text-lg focus:outline-none focus:border-[#4a154b] focus:ring-1 focus:ring-[#4a154b] transition-shadow">
+      </div>
+      <button type="submit"
+        class="w-full bg-[#4a154b] text-white py-4 rounded font-bold text-sm uppercase tracking-widest hover:bg-[#361036] transition-colors mt-2 shadow-lg">Sign
+        In</button>
+    </form>
+  </main>
+
+  <script>
+    $('#signin-form').on('submit', function (e) {
+      e.preventDefault();
+      window.location.href = '/';
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+# Conversion to YAML from Properties formar report
+# Warnings:
+# - The yaml file had comments which are lost in the refactoring!
+spring:
+  application:
+    name: MS-API-Gateway01
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+          - id: welcome-api
+            uri: lb://MS-WELCOME-API-01
+            predicates:
+            - Path=/welcome
+          - id: greet-api
+            uri: lb://MS-GREET-API-1
+            predicates:
+            - Path=/greet
+server:
+  port: 3333

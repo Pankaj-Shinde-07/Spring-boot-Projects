@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-slack-aubergine: #4A154B;
+  --color-slack-aubergine-dark: #361036;
+  --color-slack-blue: #36C5F0;
+  --color-slack-green: #2EB67D;
+  --color-slack-red: #E01E5A;
+  --color-slack-yellow: #ECB22E;
+  --color-slack-gray: #F4EDE4;
+}
+/* for tailwand css confi loading */
+
+body {
+    overflow-x: hidden;
+}
